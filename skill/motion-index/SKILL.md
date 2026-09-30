@@ -1,13 +1,16 @@
 ---
 name: motion-index
 description: >
-  Apply or adapt a web animation from the Motion Index catalog (36 CSS-first, framework-agnostic
-  patterns — spring easing, clip-path/word reveal, 3D flip, FLIP, View Transitions, scroll-driven
-  reveal and progress, motion path, shape morph, odometer, marquee, skeleton, spinner, modal, toast,
-  accordion, popover menu, tab indicator, ripple, like burst, etc.) to the user's current codebase.
-  Use when the user asks to add or tune an animation, transition, or motion effect in UI code,
-  asks to build a feature "using/like" one of these animations, mentions Motion Index, or pastes a
-  prompt copied from the Motion Index site.
+  Apply, adapt, or replace web animations in the user's current codebase using the Motion Index
+  catalog (36 CSS-first, framework-agnostic patterns — spring easing, clip-path/word reveal, 3D flip,
+  FLIP, View Transitions, scroll-driven reveal and progress, motion path, shape morph, odometer,
+  marquee, skeleton, spinner, modal, toast, accordion, popover menu, tab indicator, ripple, like
+  burst, etc.). Use whenever the user asks to add, modify, tune, replace, or restyle an animation,
+  transition, keyframes, or motion effect in UI code, including changing an existing animation and
+  switching to a different motion mid-task, and for Korean requests such as "애니메이션 수정",
+  "모션 바꿔줘", "움직임 효과 넣어줘". Also use when the user asks to build a feature "using/like"
+  one of these animations, mentions Motion Index, or pastes a prompt copied from the Motion Index
+  site.
 ---
 
 # Motion Index
