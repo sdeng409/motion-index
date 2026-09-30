@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "skill": "astro build && node scripts/sync-skill.mjs"
   },
   "dependencies": {
     "astro": "^7.3.5",
