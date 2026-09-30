@@ -5,7 +5,7 @@ export default {
   id: 'toast',
   title: '토스트 알림',
   summary: '화면 아래에서 올라왔다가 잠시 후 사라집니다.',
-  desc: '알림 영역에 `role="status"`를 붙여 두면, 문구를 넣는 순간 스크린 리더가 읽어 줍니다. 동작 줄이기 설정에서는 움직임 없이 서서히 나타나고 사라집니다.',
+  desc: '알림 영역에 `role="status"`를 붙여 두면, 문구를 넣는 순간 스크린 리더가 읽어 줍니다. 사라지는 효과가 끝나면 문구를 비워서, 다음 알림이 같은 문구여도 다시 읽히게 합니다. 끝나기를 기다릴 때는 `transitionend` 대신 `getAnimations()`를 쓰므로 재생 시간이 0이어도 문구가 남지 않습니다. 동작 줄이기 설정에서는 움직임 없이 서서히 나타나고 사라집니다.',
   tag: 'JS', kind: 'interact', support: SUPPORT.transitions,
   spec: { props: 'transform, opacity', cost: 'composite' },
   params: [
