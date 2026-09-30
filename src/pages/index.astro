@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import DetailBody from '../components/DetailBody.astro';
+import { EXAMPLES } from '../examples';
+import { SECTIONS, sectionOf } from '../lib/shared';
+
+const shelves = SECTIONS.map((section) => ({
+  ...section,
+  examples: EXAMPLES.filter((ex) => sectionOf(ex) === section.key),
+}));
+---
+<Base
+  title="Motion Index · 실무 웹 애니메이션 36가지"
+  description="실무에서 자주 쓰는 웹 애니메이션 36가지를 순수 HTML·CSS와 vanilla JS로 모았습니다. 값을 조정해 코드로 복사하거나 AI에게 적용을 맡길 수 있습니다."
+>
+  <div class="page">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow"><b>{EXAMPLES.length}</b> patterns · HTML + CSS first</p>
+        <h1>Motion Index<span class="playhead" aria-hidden="true"></span></h1>
+        <p class="intro">실무에서 자주 쓰는 웹 애니메이션 {EXAMPLES.length}가지입니다. 썸네일에 마우스를 올리면 재생되고, 제목을 누르면 코드와 브라우저 지원 범위를 볼 수 있습니다. 모든 예제는 순수 HTML·CSS와 vanilla JS로 작성해서 어떤 프레임워크에도 옮겨 쓸 수 있습니다.</p>
+        <p class="motion-note" id="motion-note" hidden>지금 시스템 설정에서 ‘동작 줄이기’가 켜져 있어서, 각 예제가 <code>prefers-reduced-motion</code> 대응 버전으로 표시됩니다.</p>
+      </div>
+      <div>
+        <dl class="legend">
+          <div><dt><span class="chip chip-tag">CSS</span></dt><dd>JS 없이 동작합니다.</dd></div>
+          <div><dt><span class="chip chip-tag is-js">JS</span></dt><dd>상태를 바꿀 때만 JS를 씁니다. 움직임은 CSS가 만듭니다.</dd></div>
+          <div><dt><span class="chip cost-composite">Composite</span></dt><dd>위치·크기·투명도만 바뀌어 가장 가볍습니다.</dd></div>
+          <div><dt><span class="chip cost-paint">Paint</span></dt><dd>매 프레임 화면을 다시 그려서 조금 무겁습니다.</dd></div>
+          <div><dt><span class="chip cost-layout">Layout</span></dt><dd>매 프레임 배치를 다시 계산해서 가장 무겁습니다.</dd></div>
+        </dl>
+        <p class="legend-source">지원 범위 출처: web-features 데이터 (2026-09-30 조회)</p>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <label class="search">
+        <span class="sr-only">예제 검색</span>
+        <input type="search" id="search" placeholder="이름이나 기법으로 검색 (예: scroll, 모달, spring)" autocomplete="off">
+      </label>
+      <div class="filter" role="group" aria-label="구현 방식">
+        <button type="button" data-filter="all" aria-pressed="true">전체</button>
+        <button type="button" data-filter="CSS" aria-pressed="false">CSS</button>
+        <button type="button" data-filter="JS" aria-pressed="false">JS</button>
+      </div>
+    </div>
+    <div id="shelves">
+      {shelves.map((shelf) => (
+        <section class="shelf" aria-labelledby={`shelf-${shelf.key}`}>
+          <div class="shelf-head">
+            <h2 id={`shelf-${shelf.key}`}>{shelf.title}</h2>
+            <span class="shelf-count">{shelf.examples.length}</span>
+            <p>{shelf.desc}</p>
+          </div>
+          <ul class="grid">
+            {shelf.examples.map((ex) => <Card ex={ex} />)}
+          </ul>
+        </section>
+      ))}
+    </div>
+    <p class="empty" id="empty" hidden>조건에 맞는 예제가 없습니다. 검색어를 줄이거나 필터를 전체로 바꿔 보세요.</p>
+  </div>
+
+  <dialog class="detail" id="detail" aria-labelledby="detail-title">
+    <DetailBody />
+  </dialog>
+
+  <script>
+    import '../scripts/demos';
+    import '../scripts/gallery';
+  </script>
+</Base>

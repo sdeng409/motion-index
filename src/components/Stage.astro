@@ -1,0 +1,24 @@
+---
+import type { Example } from '../lib/types';
+import { HINTS, SUPPORT, stageInnerHtml } from '../lib/shared';
+
+interface Props {
+  ex: Example;
+  suffix: string;
+}
+const { ex, suffix } = Astro.props;
+const timed = ex.kind === 'once' || ex.kind === 'loop';
+---
+<div class="stage-wrap">
+  <div
+    class="stage"
+    data-kind={ex.kind}
+    tabindex={timed ? 0 : undefined}
+    aria-label={timed ? `${ex.title} 미리보기, 포커스하면 재생` : undefined}
+    set:html={stageInnerHtml(ex, suffix)}
+  />
+  <span class="stage-hint">{ex.hint || HINTS[ex.kind]}</span>
+  {ex.support === SUPPORT.scrollDriven && (
+    <p class="stage-note" data-scroll-note hidden>이 브라우저는 scroll-driven animation을 지원하지 않습니다. @supports 덕분에 콘텐츠는 정적으로 보입니다.</p>
+  )}
+</div>

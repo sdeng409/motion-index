@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../layouts/Base.astro';
+import DetailBody from '../components/DetailBody.astro';
+import { EXAMPLES } from '../examples';
+import type { Example } from '../lib/types';
+
+export const getStaticPaths = (() => EXAMPLES.map((ex) => ({ params: { id: ex.id }, props: { ex } }))) satisfies GetStaticPaths;
+
+interface Props {
+  ex: Example;
+}
+const { ex } = Astro.props;
+---
+<Base title={`${ex.title} · Motion Index`} description={ex.summary}>
+  <main class="page">
+    <article class="detail detail-page" data-example-id={ex.id} aria-labelledby="detail-title">
+      <DetailBody ex={ex} />
+    </article>
+  </main>
+
+  <script>
+    import '../scripts/demos';
+    import { mountPage } from '../scripts/detail';
+
+    mountPage();
+  </script>
+</Base>

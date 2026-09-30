@@ -1,0 +1,18 @@
+---
+import type { Example } from '../lib/types';
+import { supportList } from '../lib/shared';
+
+interface Props {
+  ex: Example;
+  focusable?: boolean;
+}
+const { ex, focusable = true } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<span class="support-list" aria-label="지원 브라우저">
+  {supportList(ex).map(({ name, supported, tip }) => (
+    <span class:list={['support', { 'is-missing': !supported }]} role="img" aria-label={tip} data-tip={tip} tabindex={focusable ? 0 : undefined}>
+      <img src={`${base}icons/${name.toLowerCase()}.svg`} alt="" width="16" height="16">
+    </span>
+  ))}
+</span>

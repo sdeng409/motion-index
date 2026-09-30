@@ -1,0 +1,14 @@
+---
+import type { Example } from '../lib/types';
+import { COST_LABEL } from '../lib/shared';
+import Support from './Support.astro';
+
+interface Props {
+  ex: Example;
+  focusable?: boolean;
+}
+const { ex, focusable } = Astro.props;
+---
+<span class:list={['chip chip-tag', { 'is-js': ex.tag === 'JS' }]}>{ex.tag}</span>
+<span class={`chip cost-${ex.spec.cost}`}>{COST_LABEL[ex.spec.cost]}</span>
+<Support ex={ex} focusable={focusable} />
