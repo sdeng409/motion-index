@@ -1,0 +1,20 @@
+{
+  "name": "motion-index",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^7.3.5",
+    "prismjs": "^1.30.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/prismjs": "^1.26.6",
+    "typescript": "^6.0.3"
+  }
+}
