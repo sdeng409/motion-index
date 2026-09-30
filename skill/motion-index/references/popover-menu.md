@@ -31,6 +31,8 @@
 ```css
 .dropdown {
   display: grid;
+  /* Safari 26.3에서 popover 높이가 화면 높이만큼 늘어나 항목이 나눠 갖는 문제를 막음 */
+  align-content: start;
   min-width: 140px;
   padding: 6px;
   border: 1px solid #e3e5ea;
