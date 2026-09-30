@@ -476,6 +476,10 @@ h1 .playhead {
 }
 .detail[open] { opacity: 1; translate: 0 0; }
 @starting-style { .detail[open] { opacity: 0; translate: 0 12px; } }
+/* 모달이 열려 있는 동안 뒤 페이지가 스크롤되지 않게 함. gutter를 남겨 스크롤바가 사라질 때 화면이 옆으로 밀리지 않게 함 */
+:root { scrollbar-gutter: stable; }
+:root:has(.detail[open]) { overflow: hidden; }
+.detail { overscroll-behavior: contain; }
 .detail-page {
   display: block;
   width: auto;
