@@ -3,6 +3,7 @@ import {
   COST_LABEL, EASING_PRESETS, defaultValues, dedent, formatValue, renderCss, resolvedValues, varName,
 } from '../lib/shared';
 import type { EasingParam, Example, Param, ParamValue, RangeParam } from '../lib/types';
+import { applyPrompt, exampleMarkdown } from '../lib/markdown';
 import { createStage, play, prepareStage, restart } from './stage';
 
 // 예제마다 chunk가 나뉘어서, 연 예제의 데이터만 받음
@@ -20,6 +21,7 @@ const detailReplay = document.getElementById('detail-replay') as HTMLButtonEleme
 const detailTabs = document.getElementById('detail-tabs')!;
 const detailCode = document.querySelector<HTMLElement>('#detail-code code')!;
 const detailCopy = document.getElementById('detail-copy') as HTMLButtonElement;
+const detailPrompt = document.getElementById('detail-prompt') as HTMLButtonElement;
 const detailCaption = document.getElementById('detail-caption')!;
 const tuner = document.getElementById('detail-tuner')!;
 const tunerFields = document.getElementById('tuner-fields')!;
@@ -55,6 +57,7 @@ function showCode(key: Lang) {
   });
   detailCaption.hidden = key !== 'html' || !code.includes('demo-');
   detailCopy.textContent = '복사';
+  detailPrompt.textContent = 'AI 프롬프트 복사';
 }
 
 // 목록의 모달은 빈 틀이라 제목·설명 등을 채움. 예제 페이지는 빌드 때 채워져 있음
@@ -254,6 +257,13 @@ function copyText(button: HTMLButtonElement, text: string) {
 }
 
 detailCopy.addEventListener('click', () => copyText(detailCopy, codeFor(current, currentLang)));
+
+detailPrompt.addEventListener('click', () => {
+  const url = new URL(`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}${current.id}/`, location.origin).href;
+  const edited = (current.params || []).some((param) => String(currentValues[param.key]) !== String(param.value));
+  const markdown = exampleMarkdown(current, { demo: currentDemo, url, values: edited ? currentValues : undefined });
+  copyText(detailPrompt, applyPrompt(markdown));
+});
 
 /* ---------- 목록의 모달 ---------- */
 const dialog = document.getElementById('detail') as HTMLDialogElement | null;
