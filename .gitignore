@@ -2,5 +2,10 @@ node_modules/
 dist/
 .astro/
 .DS_Store
-.claude/
+# .claude는 에이전트·hook만 저장소에 포함하고, 개인 설정과 실행 중 생기는 파일은 뺌
+.claude/*
+!.claude/settings.json
+!.claude/agents/
+!.claude/hooks/
+!.claude/verify/
 CLAUDE.local.md
