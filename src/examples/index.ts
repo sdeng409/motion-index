@@ -32,11 +32,12 @@ import e29 from './count-up';
 import e30 from './gradient-border';
 import e31 from './shake';
 import e32 from './popover-menu';
-import e33 from './tab-indicator';
-import e34 from './like-burst';
-import e35 from './progress-ring';
-import e36 from './typing-indicator';
-import e37 from './ripple';
+import e33 from './tooltip';
+import e34 from './tab-indicator';
+import e35 from './like-burst';
+import e36 from './progress-ring';
+import e37 from './typing-indicator';
+import e38 from './ripple';
 
 export const EXAMPLES = [
   e0,
@@ -77,4 +78,5 @@ export const EXAMPLES = [
   e35,
   e36,
   e37,
+  e38,
 ];
