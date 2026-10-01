@@ -6,7 +6,7 @@
 
 - 원본: https://example.github.io/motion-index/tab-indicator/
 - 구현: CSS + 상태를 바꾸는 JS
-- 애니메이션 속성: transform (렌더링 비용 Composite)
+- 애니메이션 속성: transform, color (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9
 
 ## 기본값
