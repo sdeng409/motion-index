@@ -225,6 +225,8 @@ h1 .playhead {
 .stage:not(.is-playing):is([data-kind="once"], [data-kind="loop"]) *::after {
   animation: none !important;
 }
+/* shape-morph의 blob은 직접 조작하는 예제 안에서 혼자 무한 반복하므로 따로 멈춤. 두면 목록 페이지가 매 프레임 다시 그려짐 */
+.stage:not(.is-playing) .morph-blob { animation: none !important; }
 .stage-hint {
   position: absolute;
   left: 8px;

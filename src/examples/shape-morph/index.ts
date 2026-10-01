@@ -6,7 +6,7 @@ export default {
   section: 'technique',
   title: 'Shape morph',
   summary: '아이콘과 도형의 모양이 부드럽게 바뀝니다.',
-  desc: '`clip-path: shape()`로 직선과 곡선을 이어 모양을 그립니다. 두 모양을 같은 개수의 선으로, 같은 순서로 그리면 브라우저가 중간 모양을 자동으로 계산해 줍니다. 그래서 재생 삼각형을 두 조각으로 나눠, 일시정지 막대 두 개와 짝을 맞췄습니다. `shape()`를 지원하지 않는 브라우저에서는 모양이 애니메이션 없이 바로 바뀝니다.',
+  desc: '`clip-path: shape()`로 직선과 곡선을 이어 모양을 그립니다. 두 모양을 같은 개수의 선으로, 같은 순서로 그리면 브라우저가 중간 모양을 자동으로 계산해 줍니다. 그래서 재생 삼각형을 두 조각으로 나눠, 일시정지 막대 두 개와 짝을 맞췄습니다. `shape()`를 지원하지 않는 브라우저에서는 모양이 애니메이션 없이 바로 바뀝니다. `clip-path` 애니메이션은 매 프레임 다시 그리므로, blob처럼 무한 반복하는 효과는 화면에 보일 때만 재생하는 편이 좋습니다. 화면 밖에 있어도 계속 다시 그려지기 때문입니다.',
   tag: 'JS', kind: 'interact', support: SUPPORT.shapeFunction,
   spec: { props: 'clip-path', cost: 'paint' },
   params: [
