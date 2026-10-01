@@ -1,6 +1,6 @@
 # Motion Index
 
-> 실무에서 자주 쓰는 웹 애니메이션 36가지. 모두 순수 HTML·CSS와 vanilla JS로 작성되어 어떤 프레임워크에도 옮길 수 있습니다. 각 링크의 .md에는 설명, 조정 가능한 값, HTML·CSS·JS 코드, 옮길 때 지킬 규칙이 들어 있습니다.
+> 실무에서 자주 쓰는 웹 애니메이션 39가지. 모두 순수 HTML·CSS와 vanilla JS로 작성되어 어떤 프레임워크에도 옮길 수 있습니다. 각 링크의 .md에는 설명, 조정 가능한 값, HTML·CSS·JS 코드, 옮길 때 지킬 규칙이 들어 있습니다.
 
 적용할 때 공통 규칙:
 
@@ -23,6 +23,7 @@
 - [단어 단위 텍스트 reveal](https://example.github.io/motion-index/word-reveal.md): 단어가 하나씩 아래에서 올라옵니다. (CSS, transform)
 - [3D flip](https://example.github.io/motion-index/flip-3d.md): 카드와 플립 시계를 3D로 뒤집습니다. (JS, transform (rotateX, rotateY))
 - [Hover 패턴 모음](https://example.github.io/motion-index/hover-patterns.md): 링크 밑줄, 이미지 확대, 화살표 이동을 모았습니다. (CSS, transform)
+- [포인터 따라 기울기 · 조명](https://example.github.io/motion-index/pointer-tilt.md): 카드가 마우스 쪽으로 기울고, 마우스 위치에 빛이 비칩니다. (JS, transform, background)
 - [FLIP](https://example.github.io/motion-index/flip-technique.md): 위치가 바뀌는 요소를 부드럽게 옮겨 줍니다. (JS, transform (Web Animations API))
 - [View Transitions](https://example.github.io/motion-index/view-transitions.md): 화면을 바꾸는 코드를 감싸기만 하면 브라우저가 전환을 만들어 줍니다. (JS, ::view-transition-group (transform, size))
 - [가로 스크롤 섹션](https://example.github.io/motion-index/horizontal-scroll.md): 아래로 스크롤하는 동안 카드가 옆으로 지나갑니다. (CSS, transform)
@@ -46,6 +47,7 @@
 - [스켈레톤 shimmer](https://example.github.io/motion-index/skeleton.md): 콘텐츠를 불러오는 동안 빛이 지나가는 자리 표시자입니다. (CSS, transform)
 - [로딩 스피너](https://example.github.io/motion-index/spinner.md): 테두리 한쪽만 색이 다른 원이 돕니다. (CSS, transform)
 - [모달 열기 · 닫기](https://example.github.io/motion-index/modal.md): 모달이 열릴 때와 닫힐 때 모두 부드럽게 전환됩니다. (JS, opacity, scale)
+- [Bottom sheet](https://example.github.io/motion-index/bottom-sheet.md): 아래에서 올라오고, 손잡이를 끌어내리면 닫힙니다. (JS, translate)
 - [아코디언](https://example.github.io/motion-index/accordion.md): 내용 높이를 몰라도 부드럽게 펼치고 접습니다. (JS, grid-template-rows, transform)
 - [토스트 알림](https://example.github.io/motion-index/toast.md): 화면 아래에서 올라왔다가 잠시 후 사라집니다. (JS, transform, opacity)
 - [읽기 진행률 바](https://example.github.io/motion-index/read-progress.md): 스크롤한 만큼 상단 바가 채워집니다. (CSS, transform (scaleX))
@@ -54,6 +56,7 @@
 - [회전 그라디언트 테두리](https://example.github.io/motion-index/gradient-border.md): 카드 테두리의 그라디언트가 천천히 돕니다. (CSS, --glow-angle → background)
 - [입력 오류 흔들기](https://example.github.io/motion-index/shake.md): 잘못 입력하고 제출하면 입력란이 좌우로 흔들립니다. (JS, transform)
 - [Popover 드롭다운](https://example.github.io/motion-index/popover-menu.md): JS 없이 HTML 속성만으로 열고 닫는 메뉴입니다. (CSS, opacity, transform)
+- [Tooltip](https://example.github.io/motion-index/tooltip.md): 잠시 머무르면 나타나고, 마우스를 옮겨도 바로 사라지지 않습니다. (JS, opacity, transform)
 - [탭 indicator 슬라이드](https://example.github.io/motion-index/tab-indicator.md): 선택한 탭으로 배경이 미끄러져 이동합니다. (JS, transform, color)
 - [좋아요 하트 burst](https://example.github.io/motion-index/like-burst.md): 누르면 하트가 튀어 오르고 주변으로 조각이 퍼집니다. (JS, transform, opacity, fill)
 - [진행률 링](https://example.github.io/motion-index/progress-ring.md): 원형 테두리가 목표 비율까지 채워집니다. (CSS, stroke-dashoffset)
