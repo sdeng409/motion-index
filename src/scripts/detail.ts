@@ -163,6 +163,30 @@ function rangeField(param: RangeParam) {
   return field;
 }
 
+// 브라우저가 계산한 진행률을 받아 그리므로 cubic-bezier(), linear(), steps()를 따로 해석하지 않아도 됨
+function easingProgress(value: string) {
+  const effect = new KeyframeEffect(null, null, { duration: 100, easing: value, fill: 'both' });
+  const animation = new Animation(effect);
+  return Array.from({ length: 101 }, (_, time) => {
+    animation.currentTime = time;
+    return Number(effect.getComputedTiming().progress ?? 0);
+  });
+}
+
+function drawEasing(graph: SVGSVGElement, value: string) {
+  const progress = easingProgress(value);
+  // 튕기는 곡선은 0~1 밖으로 나가므로 그만큼 세로 범위를 넓힘
+  const low = Math.min(0, ...progress);
+  const high = Math.max(1, ...progress);
+  const y = (p: number) => (100 * (high - p) / (high - low)).toFixed(2);
+  const [zero, one] = graph.querySelectorAll('line');
+  zero.setAttribute('y1', y(0));
+  zero.setAttribute('y2', y(0));
+  one.setAttribute('y1', y(1));
+  one.setAttribute('y2', y(1));
+  graph.querySelector('path')!.setAttribute('d', `M${progress.map((p, time) => `${time},${y(p)}`).join('L')}`);
+}
+
 function easingField(param: EasingParam) {
   const field = document.createElement('div');
   field.className = 'field field-easing';
@@ -171,9 +195,15 @@ function easingField(param: EasingParam) {
     <div class="easing-controls">
       <select aria-label="속도 변화 프리셋"></select>
       <input type="text" id="tuner-easing" spellcheck="false" autocomplete="off">
+      <svg class="easing-graph" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="0" x2="100" vector-effect="non-scaling-stroke" />
+        <line x1="0" x2="100" vector-effect="non-scaling-stroke" />
+        <path vector-effect="non-scaling-stroke" />
+      </svg>
     </div>`;
   const select = field.querySelector('select')!;
   const input = field.querySelector('input')!;
+  const graph = field.querySelector('svg')!;
   const presets = EASING_PRESETS.some(([value]) => value === param.value)
     ? EASING_PRESETS
     : [[param.value, '기본값'], ...EASING_PRESETS];
@@ -183,11 +213,13 @@ function easingField(param: EasingParam) {
   select.add(new Option('직접 입력', ''));
   select.value = param.value;
   input.value = param.value;
+  drawEasing(graph, param.value);
 
   const commit = (value: string) => {
     const valid = CSS.supports('transition-timing-function', value);
     input.setAttribute('aria-invalid', String(!valid));
     if (!valid) return;
+    drawEasing(graph, value);
     applyValue(param, value);
     restartIfTimed();
   };
