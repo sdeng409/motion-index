@@ -26,6 +26,7 @@ const detailCaption = document.getElementById('detail-caption')!;
 const tuner = document.getElementById('detail-tuner')!;
 const tunerFields = document.getElementById('tuner-fields')!;
 const speedGroup = document.getElementById('detail-speed')!;
+const reduceToggle = document.getElementById('detail-reduce') as HTMLInputElement;
 
 let current: Example;
 let currentDemo = '';
@@ -313,6 +314,54 @@ speedGroup.addEventListener('click', (event) => {
   if (button) setRate(Number(button.dataset.rate));
 });
 
+/* ---------- 동작 줄이기로 보기 ---------- */
+const nativeMatchMedia = window.matchMedia.bind(window);
+const systemReduced = nativeMatchMedia('(prefers-reduced-motion: reduce)').matches;
+const previewSheet = document.querySelector<HTMLLinkElement>('link[href$="/examples.css"]')!;
+let forceReduced = false;
+let reducedSheet: HTMLLinkElement | null = null;
+let reducedSheetReady = false;
+
+// 예제 JS는 matchMedia로 설정을 확인하므로, 켜 둔 동안에는 동작 줄이기가 켜진 것처럼 답함
+window.matchMedia = (query) => nativeMatchMedia(forceReduced
+  ? query.replaceAll('(prefers-reduced-motion: reduce)', 'all').replaceAll('(prefers-reduced-motion: no-preference)', 'not all')
+  : query);
+
+function syncSheets() {
+  if (!reducedSheet || !reducedSheetReady) return;
+  reducedSheet.disabled = !forceReduced;
+  previewSheet.disabled = forceReduced;
+}
+
+function setReduced(on: boolean) {
+  forceReduced = on;
+  reduceToggle.checked = on || systemReduced;
+  if (on && !reducedSheet) {
+    reducedSheet = Object.assign(document.createElement('link'), {
+      rel: 'stylesheet',
+      href: previewSheet.href.replace(/examples\.css$/, 'examples-reduced.css'),
+    });
+    // 다 받기 전에 원래 CSS를 끄면 스타일이 잠깐 빠지므로, 받은 뒤에 바꿔 끼움
+    reducedSheet.addEventListener('load', () => {
+      reducedSheetReady = true;
+      syncSheets();
+      restartIfTimed();
+    });
+    document.head.append(reducedSheet);
+  }
+  syncSheets();
+}
+
+if (systemReduced) {
+  reduceToggle.disabled = true;
+  reduceToggle.closest('label')!.title = '시스템 설정에서 동작 줄이기가 이미 켜져 있습니다';
+}
+reduceToggle.checked = systemReduced;
+reduceToggle.addEventListener('change', () => {
+  setReduced(reduceToggle.checked);
+  restartIfTimed();
+});
+
 function copyText(button: HTMLButtonElement, text: string) {
   navigator.clipboard.writeText(text)
     .then(() => { button.textContent = '복사됨'; })
@@ -347,6 +396,8 @@ if (dialog) {
   });
   dialog.addEventListener('close', () => {
     clearValues(current);
+    // 목록의 썸네일까지 바뀐 채로 남지 않게 되돌림
+    setReduced(false);
     detailSlot.replaceChildren();
     currentStage = null;
     try { history.replaceState(null, '', location.pathname + location.search); } catch { /* 무시 */ }
