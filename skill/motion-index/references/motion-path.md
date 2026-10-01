@@ -2,7 +2,7 @@
 
 > 요소가 정해 둔 곡선을 따라 이동합니다.
 
-`offset-path`에 이동할 경로를 그려 두고 `offset-distance`를 0%에서 100%로 바꾸면, 요소가 그 경로를 따라갑니다. `offset-rotate: auto`를 주면 화살표처럼 진행 방향을 바라보며 움직입니다. 상품이 장바구니로 날아가 담기는 효과처럼 궤적이 필요한 곳에 씁니다.
+`offset-path`에 이동할 경로를 그려 두고 `offset-distance`를 0%에서 100%로 바꾸면, 요소가 그 경로를 따라갑니다. `offset-rotate: auto`를 주면 화살표처럼 진행 방향을 바라보며 움직입니다. 상품이 장바구니로 날아가 담기는 효과처럼 궤적이 필요한 곳에 씁니다. 다만 Chrome은 `offset-distance` 애니메이션을 compositor에 맡기지 못하고 main thread에서 실행합니다. 다시 그리는 비용은 거의 없지만, main thread가 바쁜 순간에는 움직임이 끊길 수 있습니다.
 
 - 원본: https://example.github.io/motion-index/motion-path/
 - 구현: CSS만 사용
