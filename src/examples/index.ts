@@ -23,19 +23,20 @@ import e20 from './check-draw';
 import e21 from './skeleton';
 import e22 from './spinner';
 import e23 from './modal';
-import e24 from './accordion';
-import e25 from './toast';
-import e26 from './read-progress';
-import e27 from './marquee';
-import e28 from './count-up';
-import e29 from './gradient-border';
-import e30 from './shake';
-import e31 from './popover-menu';
-import e32 from './tab-indicator';
-import e33 from './like-burst';
-import e34 from './progress-ring';
-import e35 from './typing-indicator';
-import e36 from './ripple';
+import e24 from './bottom-sheet';
+import e25 from './accordion';
+import e26 from './toast';
+import e27 from './read-progress';
+import e28 from './marquee';
+import e29 from './count-up';
+import e30 from './gradient-border';
+import e31 from './shake';
+import e32 from './popover-menu';
+import e33 from './tab-indicator';
+import e34 from './like-burst';
+import e35 from './progress-ring';
+import e36 from './typing-indicator';
+import e37 from './ripple';
 
 export const EXAMPLES = [
   e0,
@@ -75,4 +76,5 @@ export const EXAMPLES = [
   e34,
   e35,
   e36,
+  e37,
 ];
