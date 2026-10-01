@@ -32,7 +32,16 @@ const specRows = ex
 <div class="detail-grid">
   <div class="detail-stage">
     <div id="detail-stage-slot">{ex && <Stage ex={ex} suffix="detail" />}</div>
-    <button class="detail-replay" type="button" id="detail-replay">다시 재생</button>
+    <div class="playback">
+      <button class="detail-replay" type="button" id="detail-replay">다시 재생</button>
+      <div class="filter" role="group" aria-label="재생 속도" id="detail-speed">
+        <button type="button" data-rate="1" aria-pressed="true">1x</button>
+        <button type="button" data-rate="0.5" aria-pressed="false">0.5x</button>
+        <button type="button" data-rate="0.25" aria-pressed="false">0.25x</button>
+        <button type="button" data-rate="0.1" aria-pressed="false">0.1x</button>
+        <button type="button" data-rate="0" aria-pressed="false">멈춤</button>
+      </div>
+    </div>
   </div>
   <div class="detail-info">
     <p id="detail-desc">{descParts.map((part, index) => (index % 2 === 0 ? part : <code>{part}</code>))}</p>

@@ -25,6 +25,7 @@ const detailPrompt = document.getElementById('detail-prompt') as HTMLButtonEleme
 const detailCaption = document.getElementById('detail-caption')!;
 const tuner = document.getElementById('detail-tuner')!;
 const tunerFields = document.getElementById('tuner-fields')!;
+const speedGroup = document.getElementById('detail-speed')!;
 
 let current: Example;
 let currentDemo = '';
@@ -102,6 +103,9 @@ function setup(ex: Example, demo: string, stage: HTMLElement) {
   const replayable = ex.kind !== 'interact' || ex.autoplay;
   detailReplay.hidden = !replayable;
   detailReplay.textContent = ex.kind === 'scroll' ? '맨 위로' : '다시 재생';
+  // scroll 예제는 스크롤 위치가 진행을 정하므로 속도 조절이 의미 없음
+  speedGroup.hidden = ex.kind === 'scroll';
+  setRate(1);
 
   detailTabs.replaceChildren();
   LANGS.filter((l) => codeFor(ex, l.key)).forEach((l) => {
@@ -271,6 +275,42 @@ detailTabs.addEventListener('keydown', (event) => {
   const next = tabs[(index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
   showCode(next.dataset.lang as Lang);
   next.focus();
+});
+
+/* ---------- 재생 속도 ---------- */
+let rate = 1;
+let rateFrame = 0;
+
+// View Transition 효과는 스테이지가 아니라 html의 pseudo-element에서 재생되므로 함께 모음
+// 스크롤에 연동된 애니메이션은 속도 개념이 없으므로 뺌
+function previewAnimations(stage: HTMLElement) {
+  const viewTransitions = document.getAnimations()
+    .filter((animation) => (animation.effect as KeyframeEffect | null)?.pseudoElement?.startsWith('::view-transition'));
+  return [...stage.getAnimations({ subtree: true }), ...viewTransitions]
+    .filter((animation) => animation.timeline === document.timeline);
+}
+
+// 눌러서 새로 시작되는 애니메이션도 같은 속도로 맞추기 위해, 1x가 아닐 때는 매 프레임 다시 적용함
+function applyRate() {
+  cancelAnimationFrame(rateFrame);
+  if (!currentStage) return;
+  previewAnimations(currentStage).forEach((animation) => {
+    if (animation.playbackRate !== rate) animation.playbackRate = rate;
+  });
+  if (rate !== 1) rateFrame = requestAnimationFrame(applyRate);
+}
+
+function setRate(value: number) {
+  rate = value;
+  speedGroup.querySelectorAll<HTMLButtonElement>('button').forEach((button) => {
+    button.setAttribute('aria-pressed', String(Number(button.dataset.rate) === value));
+  });
+  applyRate();
+}
+
+speedGroup.addEventListener('click', (event) => {
+  const button = (event.target as Element).closest<HTMLButtonElement>('button[data-rate]');
+  if (button) setRate(Number(button.dataset.rate));
 });
 
 function copyText(button: HTMLButtonElement, text: string) {
