@@ -4,37 +4,38 @@ import e1 from './clip-reveal';
 import e2 from './word-reveal';
 import e3 from './flip-3d';
 import e4 from './hover-patterns';
-import e5 from './flip-technique';
-import e6 from './view-transitions';
-import e7 from './horizontal-scroll';
-import e8 from './motion-path';
-import e9 from './shape-morph';
-import e10 from './odometer';
-import e11 from './typewriter';
-import e12 from './snap-carousel';
-import e13 from './aurora';
-import e14 from './fade-up';
-import e15 from './stagger';
-import e16 from './scroll-reveal';
-import e17 from './button-press';
-import e18 from './toggle-switch';
-import e19 from './check-draw';
-import e20 from './skeleton';
-import e21 from './spinner';
-import e22 from './modal';
-import e23 from './accordion';
-import e24 from './toast';
-import e25 from './read-progress';
-import e26 from './marquee';
-import e27 from './count-up';
-import e28 from './gradient-border';
-import e29 from './shake';
-import e30 from './popover-menu';
-import e31 from './tab-indicator';
-import e32 from './like-burst';
-import e33 from './progress-ring';
-import e34 from './typing-indicator';
-import e35 from './ripple';
+import e5 from './pointer-tilt';
+import e6 from './flip-technique';
+import e7 from './view-transitions';
+import e8 from './horizontal-scroll';
+import e9 from './motion-path';
+import e10 from './shape-morph';
+import e11 from './odometer';
+import e12 from './typewriter';
+import e13 from './snap-carousel';
+import e14 from './aurora';
+import e15 from './fade-up';
+import e16 from './stagger';
+import e17 from './scroll-reveal';
+import e18 from './button-press';
+import e19 from './toggle-switch';
+import e20 from './check-draw';
+import e21 from './skeleton';
+import e22 from './spinner';
+import e23 from './modal';
+import e24 from './accordion';
+import e25 from './toast';
+import e26 from './read-progress';
+import e27 from './marquee';
+import e28 from './count-up';
+import e29 from './gradient-border';
+import e30 from './shake';
+import e31 from './popover-menu';
+import e32 from './tab-indicator';
+import e33 from './like-burst';
+import e34 from './progress-ring';
+import e35 from './typing-indicator';
+import e36 from './ripple';
 
 export const EXAMPLES = [
   e0,
@@ -73,4 +74,5 @@ export const EXAMPLES = [
   e33,
   e34,
   e35,
+  e36,
 ];
