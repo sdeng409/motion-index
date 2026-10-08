@@ -4,7 +4,7 @@
 
 JS는 카드 안에서 마우스가 있는 위치를 0~1 사이 값으로 바꿔 `--x`, `--y` 변수에 넣기만 합니다. 기울기와 조명은 CSS가 이 두 변수로 계산합니다. 위치는 기울어지는 카드가 아니라 바깥 틀에서 잽니다. 기울어진 카드에서 재면 카드가 움직일 때마다 잰 값도 달라져서 떨립니다. 마우스가 움직이는 동안에는 짧게, 떠날 때는 길게 전환해서 부드럽게 제자리로 돌아오게 했습니다. 조명은 배경을 매 프레임 다시 그리므로 paint 비용이 듭니다. 동작 줄이기 설정에서는 기울기를 끄고 조명만 남깁니다.
 
-- 원본: https://motion-index.pages.dev/pointer-tilt/
+- 원본: https://motion-lib.pages.dev/pointer-tilt/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform, background (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

@@ -4,7 +4,7 @@
 
 `clip-path: shape()`로 직선과 곡선을 이어 모양을 그립니다. 두 모양을 같은 개수의 선으로, 같은 순서로 그리면 브라우저가 중간 모양을 자동으로 계산해 줍니다. 그래서 재생 삼각형을 두 조각으로 나눠, 일시정지 막대 두 개와 짝을 맞췄습니다. `shape()`를 지원하지 않는 브라우저에서는 모양이 애니메이션 없이 바로 바뀝니다. `clip-path` 애니메이션은 매 프레임 다시 그리므로, blob처럼 무한 반복하는 효과는 화면에 보일 때만 재생하는 편이 좋습니다. 화면 밖에 있어도 계속 다시 그려지기 때문입니다.
 
-- 원본: https://motion-index.pages.dev/shape-morph/
+- 원본: https://motion-lib.pages.dev/shape-morph/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: clip-path (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 135 · Edge 135 · Firefox 148 · Safari 18.4

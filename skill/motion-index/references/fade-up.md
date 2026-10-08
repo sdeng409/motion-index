@@ -4,7 +4,7 @@
 
 가장 흔한 등장 효과입니다. 요소가 투명한 상태로 조금 아래에 있다가, 원래 자리로 올라오며 선명해집니다. 동작 줄이기 설정에서는 움직임 없이 서서히 나타나기만 합니다.
 
-- 원본: https://motion-index.pages.dev/fade-up/
+- 원본: https://motion-lib.pages.dev/fade-up/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform, opacity (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

@@ -4,7 +4,7 @@
 
 누른 위치에 원을 하나 만들고, CSS가 그 원을 키우면서 흐리게 만듭니다. 애니메이션이 끝나면(`animationend`) 원을 지웁니다. 동작 줄이기 설정에서는 원을 만들지 않습니다. 키보드로 누르면 누른 위치가 없으므로 물결도 생기지 않습니다.
 
-- 원본: https://motion-index.pages.dev/ripple/
+- 원본: https://motion-lib.pages.dev/ripple/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform, opacity (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

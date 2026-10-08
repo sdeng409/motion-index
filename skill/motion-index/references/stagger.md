@@ -4,7 +4,7 @@
 
 모든 항목에 같은 등장 효과를 주고, 시작 시간만 "순번 × 간격"만큼 늦춥니다. 순번은 최신 브라우저에서는 CSS의 `sibling-index()`가 직접 세고, 그렇지 않은 브라우저에서는 HTML에 넣은 `--i` 값을 씁니다. `sibling-index()`를 지원하는 브라우저가 충분히 많아지면 `--i`는 지워도 됩니다.
 
-- 원본: https://motion-index.pages.dev/stagger/
+- 원본: https://motion-lib.pages.dev/stagger/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform, opacity (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

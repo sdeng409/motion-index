@@ -4,7 +4,7 @@
 
 나타날 때와 사라질 때 `transition-delay`를 다르게 줍니다. 나타날 때는 잠깐 기다려서, 마우스가 지나가기만 해도 툴팁이 깜빡이는 일을 막습니다. 사라질 때는 짧게 기다려서, 마우스를 툴팁 위로 옮기는 동안 닫히지 않게 합니다. `visibility`는 중간값이 없으므로 사라질 때만 효과가 끝날 때까지 늦춥니다. 키보드로 버튼에 이동해도 보이고, Esc를 누르면 마우스나 포커스를 옮기지 않아도 닫힙니다(WCAG 1.4.13). JS는 Esc로 닫은 상태만 기록합니다.
 
-- 원본: https://motion-index.pages.dev/tooltip/
+- 원본: https://motion-lib.pages.dev/tooltip/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: opacity, transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

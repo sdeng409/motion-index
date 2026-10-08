@@ -4,7 +4,7 @@
 
 섹션을 화면보다 길게 만들고, 안쪽 내용은 화면에 고정(`sticky`)합니다. 섹션을 스크롤한 정도에 맞춰 카드 띠를 옆으로 옮기면, 세로 스크롤이 가로 이동처럼 보입니다. 크기는 `cqh`·`cqw` 단위로 적었습니다. 이 단위는 감싸는 container가 없으면 화면 크기를 기준으로 계산되므로, 페이지에 그대로 넣어도 동작합니다. 지원하지 않는 브라우저와 동작 줄이기 설정에서는 일반 가로 스크롤로 바뀝니다.
 
-- 원본: https://motion-index.pages.dev/horizontal-scroll/
+- 원본: https://motion-lib.pages.dev/horizontal-scroll/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 115 · Edge 115 · Safari 26 · Firefox 미지원

@@ -4,7 +4,7 @@
 
 JS는 눌림 상태(`aria-pressed`)만 바꿉니다. 눌린 상태가 되는 순간 CSS 규칙이 새로 적용되면서 애니메이션이 시작되고, 좋아요를 취소하면 효과 없이 원래대로 돌아갑니다. 퍼지는 링은 `::before`로, 점 여섯 개는 `::after`에 배경을 여러 겹 깔아서 그렸습니다. 그래서 HTML 요소를 더 만들 필요가 없습니다.
 
-- 원본: https://motion-index.pages.dev/like-burst/
+- 원본: https://motion-lib.pages.dev/like-burst/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform, opacity, fill (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

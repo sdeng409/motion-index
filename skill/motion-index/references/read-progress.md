@@ -4,7 +4,7 @@
 
 스크롤한 정도를 애니메이션 진행도로 씁니다(`animation-timeline: scroll()`). 끝까지 스크롤하면 바가 꽉 찹니다. 페이지에 넣으면 페이지 전체의 스크롤을 따라갑니다. 바는 사용자가 스크롤한 만큼만 움직이므로, 동작 줄이기 설정에서도 그대로 둡니다.
 
-- 원본: https://motion-index.pages.dev/read-progress/
+- 원본: https://motion-lib.pages.dev/read-progress/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (scaleX) (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 115 · Edge 115 · Safari 26 · Firefox 미지원

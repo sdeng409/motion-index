@@ -4,7 +4,7 @@
 
 자리마다 0부터 9까지 세로로 적힌 숫자 띠를 두고, 보여줄 숫자(`--d`)만큼 띠를 위로 올립니다. 띠는 줄바꿈 문자(`\A`)를 넣은 가상 요소로 만들어서 HTML이 길어지지 않습니다. JS는 자리마다 `--d` 값만 바꾸고, 굴러가는 움직임은 CSS가 맡습니다. 가격, 방문자 수, 날짜 표시에 쓸 수 있습니다.
 
-- 원본: https://motion-index.pages.dev/odometer/
+- 원본: https://motion-lib.pages.dev/odometer/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

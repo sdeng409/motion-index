@@ -4,7 +4,7 @@
 
 브라우저가 바뀌기 전과 바뀐 후의 화면을 찍어 두고, 같은 이름이 붙은 요소끼리 부드럽게 이어 줍니다. 브라우저에 FLIP이 내장되어 있는 셈입니다. 코드는 FLIP보다 훨씬 짧지만, 움직이는 것이 실제 요소가 아니라 찍어 둔 이미지라서 전환 중에는 누를 수 없습니다. 이름(`view-transition-name`)이 붙은 요소는 페이지 어디에 있든 함께 찍히므로, 전환하는 동안에만 해당 목록에 이름을 붙였다가 뗍니다. 지원하지 않는 브라우저에서는 전환 없이 바로 바뀝니다.
 
-- 원본: https://motion-index.pages.dev/view-transitions/
+- 원본: https://motion-lib.pages.dev/view-transitions/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: ::view-transition-group (transform, size) (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 125 · Edge 125 · Firefox 144 · Safari 18.2

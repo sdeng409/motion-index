@@ -4,7 +4,7 @@
 
 실제 체크박스에 `role="switch"`를 붙이고 모양만 스위치처럼 바꿨습니다. 그래서 키보드 조작과 스크린 리더 지원을 따로 만들 필요가 없습니다. easing의 마지막 값을 1보다 크게(1.4) 주어서, 손잡이가 목표 지점을 살짝 지나쳤다가 돌아옵니다.
 
-- 원본: https://motion-index.pages.dev/toggle-switch/
+- 원본: https://motion-lib.pages.dev/toggle-switch/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform, background-color (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

@@ -4,7 +4,7 @@
 
 누를 수 있다는 느낌을 주는 기본 반응입니다. hover 효과는 마우스가 있는 기기에서만 켜지도록 `@media (hover: hover)`로 감쌌습니다. 그렇게 하지 않으면 터치 기기에서 한 번 누른 뒤에 떠오른 상태가 그대로 남습니다. 그림자도 함께 바뀌어서, `transform`만 바꾸는 효과보다는 조금 무겁습니다.
 
-- 원본: https://motion-index.pages.dev/button-press/
+- 원본: https://motion-lib.pages.dev/button-press/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform, box-shadow (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

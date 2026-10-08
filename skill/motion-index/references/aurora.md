@@ -4,7 +4,7 @@
 
 흐림 효과(`filter: blur`)는 그대로 두고 위치(`transform`)만 움직입니다. 흐림은 계산이 무거운데, 이렇게 하면 한 번 계산한 흐림을 옮기기만 하므로 가볍습니다. 덩어리마다 `--x`, `--y`로 다른 방향을 주고 왕복시킵니다. 히어로 배경이나 빈 화면을 채울 때 씁니다.
 
-- 원본: https://motion-index.pages.dev/aurora/
+- 원본: https://motion-lib.pages.dev/aurora/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

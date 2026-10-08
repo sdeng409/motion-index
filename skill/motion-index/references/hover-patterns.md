@@ -4,7 +4,7 @@
 
 링크나 카드에 바로 붙여 쓸 수 있는 hover 효과 세 가지입니다. 밑줄은 왼쪽에서 그어지고 오른쪽으로 사라지는데, 늘어나는 기준점(`transform-origin`)을 상태에 따라 반대로 바꿔서 만듭니다. 이미지 확대는 틀 밖으로 넘치는 부분을 숨기고 안쪽 이미지만 키웁니다. 화살표 효과는 글자는 그대로 두고 화살표만 옆으로 밉니다. 세 가지 모두 `transform`만 바꾸므로 가볍습니다.
 
-- 원본: https://motion-index.pages.dev/hover-patterns/
+- 원본: https://motion-lib.pages.dev/hover-patterns/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

@@ -4,7 +4,7 @@
 
 버튼에 `popovertarget`을 적으면 누를 때마다 메뉴가 열리고 닫힙니다. 바깥을 누르거나 Esc를 누르면 닫히는 동작도 브라우저가 알아서 처리합니다. 열리고 닫히는 효과는 모달 예제와 같은 `@starting-style` 방식입니다. 메뉴를 버튼 바로 아래에 붙이는 일은 anchor positioning이 맡으며, 지원하지 않는 브라우저에서는 메뉴가 화면 가운데에 열립니다. anchor positioning을 쓰면 Chrome은 열리고 닫히는 동안 메뉴 위치를 매 프레임 다시 계산합니다. 메뉴 하나만 다시 배치하므로 가볍지만, 효과 자체는 `opacity`와 `transform`만 쓰더라도 layout 비용이 듭니다.
 
-- 원본: https://motion-index.pages.dev/popover-menu/
+- 원본: https://motion-lib.pages.dev/popover-menu/
 - 구현: CSS만 사용
 - 애니메이션 속성: opacity, transform (렌더링 비용 Layout)
 - 지원 브라우저: Chrome 116 · Edge 116 · Firefox 125 · Safari 17

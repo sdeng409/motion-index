@@ -4,7 +4,7 @@
 
 `display: none`이었다가 나타나는 요소에는 원래 전환 효과를 주기 어렵습니다. `@starting-style`로 "나타나기 직전의 모습"을 정해 주면 열릴 때 효과가 생깁니다. 닫힐 때는 `allow-discrete`로 사라지는 시점을 효과가 끝날 때까지 미룹니다. 지원하지 않는 브라우저에서는 효과 없이 바로 열리고 닫힙니다. 이 갤러리의 상세 창도 같은 방식으로 만들었습니다.
 
-- 원본: https://motion-index.pages.dev/modal/
+- 원본: https://motion-lib.pages.dev/modal/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: opacity, scale (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 117 · Edge 117 · Firefox 129 · Safari 17.5
