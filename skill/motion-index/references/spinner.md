@@ -4,7 +4,7 @@
 
 로딩 중이라는 사실은 꼭 알려야 하므로, 동작 줄이기 설정에서도 멈추지 않고 천천히 돕니다. `role="status"`와 `aria-label`로 스크린 리더에도 로딩 중임을 알립니다.
 
-- 원본: https://example.github.io/motion-index/spinner/
+- 원본: https://motion-index.pages.dev/spinner/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

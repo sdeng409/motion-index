@@ -4,7 +4,7 @@
 
 CSS 변수는 보통 중간값을 계산할 수 없어서, 0에서 1280으로 한 번에 바뀝니다. `@property`로 이 변수가 "정수"라고 알려 주면, 브라우저가 0, 1, 2…처럼 중간값을 계산해 줍니다. 그 값을 `counter()`로 화면에 출력합니다. 목표 값은 `--num`으로 넣습니다. 매 프레임 글자가 바뀌므로 Layout 비용이 듭니다.
 
-- 원본: https://example.github.io/motion-index/count-up/
+- 원본: https://motion-index.pages.dev/count-up/
 - 구현: CSS만 사용
 - 애니메이션 속성: --num (@property <integer>) (렌더링 비용 Layout)
 - 지원 브라우저: Chrome 85 · Edge 85 · Firefox 128 · Safari 16.4

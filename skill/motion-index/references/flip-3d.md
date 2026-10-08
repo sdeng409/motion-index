@@ -4,7 +4,7 @@
 
 앞면과 뒷면을 겹쳐 두고, 뒷면은 미리 180도 돌려 둡니다. 둘을 감싼 부모를 회전시키면 앞면이 넘어가고 뒷면이 보입니다. `perspective`는 원근감을 주고, `backface-visibility: hidden`은 뒤집힌 면을 숨깁니다. 카드는 hover나 키보드 포커스로 뒤집힙니다. 플립 시계는 숫자판을 위아래 반쪽으로 나누고, 윗장이 넘어간 다음 아랫장이 내려오도록 두 animation을 이어 붙였습니다.
 
-- 원본: https://example.github.io/motion-index/flip-3d/
+- 원본: https://motion-index.pages.dev/flip-3d/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform (rotateX, rotateY) (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 36 · Edge 12 · Firefox 16 · Safari 15.4

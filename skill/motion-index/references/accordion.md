@@ -4,7 +4,7 @@
 
 `height: auto`에는 전환 효과가 적용되지 않습니다. 대신 grid 행 높이를 `0fr`에서 `1fr`로 바꾸면, 내용 높이에 맞춰 부드럽게 늘어납니다. 접혀 있을 때는 `visibility: hidden`으로 숨겨서, 안쪽 링크로 Tab 키 이동이 되지 않게 합니다. 높이가 바뀌면 주변 배치도 다시 계산해야 하므로 Layout 비용이 듭니다.
 
-- 원본: https://example.github.io/motion-index/accordion/
+- 원본: https://motion-index.pages.dev/accordion/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: grid-template-rows, transform (렌더링 비용 Layout)
 - 지원 브라우저: Chrome 107 · Edge 107 · Firefox 66 · Safari 16

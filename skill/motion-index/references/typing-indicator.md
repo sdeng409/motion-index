@@ -4,7 +4,7 @@
 
 세 점에 같은 애니메이션을 주고, 시작 시간만 한 주기의 15%씩 늦춥니다. 늦추는 시간을 주기에 비례해서 계산하므로, 속도를 바꿔도 점들이 이어서 튀는 리듬이 유지됩니다.
 
-- 원본: https://example.github.io/motion-index/typing-indicator/
+- 원본: https://motion-index.pages.dev/typing-indicator/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform, opacity (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

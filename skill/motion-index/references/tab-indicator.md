@@ -4,7 +4,7 @@
 
 탭 너비를 똑같이 나눠 두면, 배경은 "자기 너비 × 탭 순번"만큼만 옮기면 됩니다. 그래서 탭 위치를 따로 잴 필요가 없고, JS는 선택한 탭의 순번(`--index`)만 바꿉니다. 탭 너비가 서로 다르다면 각 탭의 위치와 너비를 재서 옮기는 방식으로 바꿔야 합니다.
 
-- 원본: https://example.github.io/motion-index/tab-indicator/
+- 원본: https://motion-index.pages.dev/tab-indicator/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform, color (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

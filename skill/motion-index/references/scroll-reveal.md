@@ -4,7 +4,7 @@
 
 요소가 화면에 들어온 정도를 애니메이션 진행도로 씁니다(`animation-timeline: view()`). 반쯤 들어오면 반쯤 나타나는 식입니다. 예전에는 IntersectionObserver 같은 JS가 필요했지만, 이제는 CSS만으로 됩니다. 지원하지 않는 브라우저에서는 요소가 처음부터 보이도록 `@supports`로 감쌌습니다.
 
-- 원본: https://example.github.io/motion-index/scroll-reveal/
+- 원본: https://motion-index.pages.dev/scroll-reveal/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform, opacity (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 115 · Edge 115 · Safari 26 · Firefox 미지원

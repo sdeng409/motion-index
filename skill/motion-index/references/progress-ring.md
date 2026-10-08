@@ -4,7 +4,7 @@
 
 체크 표시 그리기와 같은 점선 기법을 원에 적용했습니다. 반지름을 15.9155로 두면 원 둘레가 정확히 100이 됩니다. 그래서 72%를 채우려면 점선을 100 - 72 = 28만큼만 밀어 두면 되므로, 계산이 간단해집니다. 비율은 `--value`로 넣습니다.
 
-- 원본: https://example.github.io/motion-index/progress-ring/
+- 원본: https://motion-index.pages.dev/progress-ring/
 - 구현: CSS만 사용
 - 애니메이션 속성: stroke-dashoffset (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

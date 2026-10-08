@@ -4,7 +4,7 @@
 
 같은 항목을 한 번 더 이어 붙인 뒤, 띠 전체를 절반(-50%)만큼 옮깁니다. 절반을 옮긴 순간의 모습이 처음 모습과 똑같아서, 반복되어도 이음새가 보이지 않습니다. 복제한 항목은 `aria-hidden`으로 숨겨서 스크린 리더가 두 번 읽지 않게 합니다. 동작 줄이기 설정에서는 멈추고, 사용자가 직접 가로로 스크롤할 수 있게 바뀝니다.
 
-- 원본: https://example.github.io/motion-index/marquee/
+- 원본: https://motion-index.pages.dev/marquee/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

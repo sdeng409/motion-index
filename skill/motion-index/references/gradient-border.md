@@ -4,7 +4,7 @@
 
 `@property`로 각도 변수를 등록하면 각도를 부드럽게 바꿀 수 있습니다. 이 각도를 원뿔형 그라디언트(`conic-gradient`)의 시작 방향으로 씁니다. 배경을 두 겹으로 깔아서, 안쪽은 흰색으로 덮고 테두리 부분에만 그라디언트가 보이게 했습니다. 매 프레임 배경을 다시 그리므로, 한 화면에 여러 개를 쓰는 것은 피하는 편이 좋습니다.
 
-- 원본: https://example.github.io/motion-index/gradient-border/
+- 원본: https://motion-index.pages.dev/gradient-border/
 - 구현: CSS만 사용
 - 애니메이션 속성: --glow-angle → background (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 85 · Edge 85 · Firefox 128 · Safari 16.4

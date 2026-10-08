@@ -4,7 +4,7 @@
 
 열고 닫는 효과는 모달 예제와 같은 `@starting-style` 방식입니다. 끄는 동안에는 JS가 손가락 위치를 `--drag` 변수에 넣고, 시트를 손가락에 바로 붙이기 위해 전환 효과를 끕니다. 손을 떼면 전환 효과를 다시 켜는데, 시트 높이의 1/3 넘게 끌었거나 아래로 빠르게 튕겼으면 닫고 아니면 제자리로 돌아갑니다. 어느 쪽이든 손을 뗀 위치에서 이어서 움직입니다. 손잡이에는 `touch-action: none`을 줘서 끄는 동안 페이지가 스크롤되지 않게 했습니다. 바깥을 누르거나 Esc를 눌러도 닫힙니다.
 
-- 원본: https://example.github.io/motion-index/bottom-sheet/
+- 원본: https://motion-index.pages.dev/bottom-sheet/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: translate (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 117 · Edge 117 · Firefox 129 · Safari 17.5

@@ -4,7 +4,7 @@
 
 단어마다 넘치는 부분을 숨기는 틀(`overflow: hidden`)을 씌우고, 안쪽 글자를 틀 아래에서 위로 올립니다. 글자가 틀 밖에 있는 동안에는 보이지 않아서, 바닥에서 솟아오르는 것처럼 보입니다. 단어 순서는 `--i`로 넣습니다. 동작 줄이기 설정에서는 움직임 없이 서서히 나타나기만 합니다.
 
-- 원본: https://example.github.io/motion-index/word-reveal/
+- 원본: https://motion-index.pages.dev/word-reveal/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

@@ -4,7 +4,7 @@
 
 흔히 배경 위치(`background-position`)를 움직여서 만드는데, 이 방법은 매 프레임 화면을 다시 그려야 합니다. 여기서는 빛 모양을 가상 요소에 한 번 그려 두고 `transform`으로 옮기기만 하므로 더 가볍습니다.
 
-- 원본: https://example.github.io/motion-index/skeleton/
+- 원본: https://motion-index.pages.dev/skeleton/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

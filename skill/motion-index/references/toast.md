@@ -4,7 +4,7 @@
 
 알림 영역에 `role="status"`를 붙여 두면, 문구를 넣는 순간 스크린 리더가 읽어 줍니다. 사라지는 효과가 끝나면 문구를 비워서, 다음 알림이 같은 문구여도 다시 읽히게 합니다. 끝나기를 기다릴 때는 `transitionend` 대신 `getAnimations()`를 쓰므로 재생 시간이 0이어도 문구가 남지 않습니다. 동작 줄이기 설정에서는 움직임 없이 서서히 나타나고 사라집니다.
 
-- 원본: https://example.github.io/motion-index/toast/
+- 원본: https://motion-index.pages.dev/toast/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform, opacity (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9

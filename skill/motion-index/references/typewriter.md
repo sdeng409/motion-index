@@ -4,7 +4,7 @@
 
 글자를 담은 상자의 너비를 0에서 글자 수만큼 늘리되, `steps()`로 한 글자씩 끊어서 늘립니다. 글자 수는 `--chars`로 넣고, 전체 시간은 "글자당 시간 × 글자 수"로 계산합니다. 너비를 글자 수(`ch` 단위)로 맞추기 때문에, 모든 글자의 폭이 같은 고정폭 글꼴과 영문·숫자에서만 정확합니다. 너비를 바꾸므로 Layout 비용이 듭니다.
 
-- 원본: https://example.github.io/motion-index/typewriter/
+- 원본: https://motion-index.pages.dev/typewriter/
 - 구현: CSS만 사용
 - 애니메이션 속성: width, border-color (렌더링 비용 Layout)
 - 지원 브라우저: Chrome 77 · Edge 79 · Firefox 65 · Safari 14

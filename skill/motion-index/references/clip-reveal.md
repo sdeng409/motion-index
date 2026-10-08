@@ -4,7 +4,7 @@
 
 요소는 처음부터 제자리에 있고, 보이는 영역만 점점 넓어집니다. 그래서 주변 레이아웃이 밀리지 않습니다. `inset()`은 한쪽에서 쓸어 내듯 드러내고, `circle()`은 가운데에서 원이 퍼지듯 드러냅니다. 이미지, 제목, 섹션 배경 어디에나 쓸 수 있습니다.
 
-- 원본: https://example.github.io/motion-index/clip-reveal/
+- 원본: https://motion-index.pages.dev/clip-reveal/
 - 구현: CSS만 사용
 - 애니메이션 속성: clip-path (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 88 · Edge 88 · Firefox 71 · Safari 13.1

@@ -4,7 +4,7 @@
 
 SVG 선을 점선으로 만들되, 점선 한 칸의 길이를 선 전체 길이와 같게 합니다(`stroke-dasharray`). 그 점선을 전체 길이만큼 밀어 두었다가(`stroke-dashoffset`) 0으로 되돌리면, 선이 그려지는 것처럼 보입니다. 선의 전체 길이는 요소마다 `--len`으로 넣습니다.
 
-- 원본: https://example.github.io/motion-index/check-draw/
+- 원본: https://motion-index.pages.dev/check-draw/
 - 구현: CSS만 사용
 - 애니메이션 속성: stroke-dashoffset (렌더링 비용 Paint)
 - 지원 브라우저: Chrome 43 · Edge 12 · Firefox 16 · Safari 9

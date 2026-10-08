@@ -4,7 +4,7 @@
 
 스크롤이 멈출 때 항목이 가운데에 딱 맞게 서도록 `scroll-snap`을 겁니다. 그리고 각 항목이 가로로 지나가는 정도(`view(inline)`)에 맞춰 크기와 투명도를 바꿉니다. 진행도 50% 지점이 항목이 정확히 가운데에 온 순간이라서, 그때 가장 크고 선명해집니다. 지원하지 않는 브라우저와 동작 줄이기 설정에서는 크기 변화 없이 스냅만 동작합니다.
 
-- 원본: https://example.github.io/motion-index/snap-carousel/
+- 원본: https://motion-index.pages.dev/snap-carousel/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform, opacity (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 115 · Edge 115 · Safari 26 · Firefox 미지원

@@ -4,7 +4,7 @@
 
 튕기는 힘과 멈추는 힘 두 값만 정하면, 스프링이 튕기다가 멈추는 움직임을 계산해 `linear()` 곡선과 알맞은 재생 시간을 만들어 줍니다. 튕기는 힘을 올리면 더 빨라지고, 멈추는 힘을 내리면 더 많이 튕깁니다. 만든 `linear()` 값은 CSS만으로 동작하며, 다른 예제의 속도 변화 입력란에 붙여 넣어 쓸 수도 있습니다.
 
-- 원본: https://example.github.io/motion-index/spring/
+- 원본: https://motion-index.pages.dev/spring/
 - 구현: CSS만 사용
 - 애니메이션 속성: transform (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 113 · Edge 113 · Firefox 112 · Safari 17.2

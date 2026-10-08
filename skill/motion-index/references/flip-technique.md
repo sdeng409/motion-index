@@ -4,7 +4,7 @@
 
 목록의 순서를 바꾸면 요소는 새 위치로 순간 이동합니다. FLIP은 이 순간 이동을 부드러운 이동으로 바꾸는 방법입니다. ① 바꾸기 전 위치를 재고, ② 순서를 바꾼 뒤 새 위치를 잽니다. ③ 그 차이만큼 요소를 원래 자리로 되돌려 놓았다가, ④ 되돌린 것을 풀면서 새 자리로 이동시킵니다. 실제 요소가 움직이므로 이동하는 중에도 누를 수 있습니다. 재생 시간과 easing은 CSS 변수에 두고 JS가 읽어서 씁니다. View Transitions 예제와 같은 동작을 다른 방법으로 만든 것입니다.
 
-- 원본: https://example.github.io/motion-index/flip-technique/
+- 원본: https://motion-index.pages.dev/flip-technique/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: transform (Web Animations API) (렌더링 비용 Composite)
 - 지원 브라우저: Chrome 84 · Edge 84 · Firefox 75 · Safari 14

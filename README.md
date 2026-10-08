@@ -6,7 +6,7 @@
 
 ```sh
 pnpm install
-pnpm dev      # http://localhost:4321/motion-index/
+pnpm dev      # http://localhost:4321/
 pnpm check    # 타입 검사
 pnpm build    # dist/ 생성
 pnpm skill    # 빌드 후 skill/motion-index/references 갱신
