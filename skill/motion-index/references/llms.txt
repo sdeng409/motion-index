@@ -27,7 +27,7 @@
 - [FLIP](https://motion-lib.pages.dev/flip-technique.md): 위치가 바뀌는 요소를 부드럽게 옮겨 줍니다. (JS, transform (Web Animations API))
 - [View Transitions](https://motion-lib.pages.dev/view-transitions.md): 화면을 바꾸는 코드를 감싸기만 하면 브라우저가 전환을 만들어 줍니다. (JS, ::view-transition-group (transform, size))
 - [가로 스크롤 섹션](https://motion-lib.pages.dev/horizontal-scroll.md): 아래로 스크롤하는 동안 카드가 옆으로 지나갑니다. (CSS, transform)
-- [Motion path](https://motion-lib.pages.dev/motion-path.md): 요소가 정해 둔 곡선을 따라 이동합니다. (CSS, offset-distance)
+- [Motion path](https://motion-lib.pages.dev/motion-path.md): 요소가 정해 둔 곡선을 따라 이동합니다. (JS, offset-distance)
 - [Shape morph](https://motion-lib.pages.dev/shape-morph.md): 아이콘과 도형의 모양이 부드럽게 바뀝니다. (JS, clip-path)
 - [Odometer 숫자 롤링](https://motion-lib.pages.dev/odometer.md): 자리마다 숫자가 굴러가며 새 값으로 바뀝니다. (JS, transform)
 - [Typewriter](https://motion-lib.pages.dev/typewriter.md): 글자가 한 자씩 찍히고 커서가 깜빡입니다. (CSS, width, border-color)

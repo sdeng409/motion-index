@@ -368,6 +368,8 @@ h1 .playhead {
 .demo-scroll-intro.is-short { min-height: 45cqh; }
 .demo-path-guide { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .demo-path-guide path { fill: none; stroke: #c5cad3; stroke-width: 2; stroke-dasharray: 4 5; }
+/* 썸네일에서는 경로를 그리지 못하게 함. 터치 스크롤도 막지 않음 */
+.card .path-area { pointer-events: none; }
 .demo-dot { width: 14px; height: 14px; border-radius: 50%; background: #ef4444; }
 .demo-arrow { color: #2f4bd8; font-size: 18px; line-height: 1; }
 .demo-terminal {

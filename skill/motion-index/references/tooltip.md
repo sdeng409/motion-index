@@ -7,7 +7,7 @@
 - 원본: https://motion-lib.pages.dev/tooltip/
 - 구현: CSS + 상태를 바꾸는 JS
 - 애니메이션 속성: opacity, transform (렌더링 비용 Composite)
-- 지원 브라우저: Chrome 26 · Edge 12 · Firefox 16 · Safari 9
+- 지원 브라우저: Chrome 87 · Edge 87 · Firefox 85 · Safari 15.4
 
 ## 기본값
 

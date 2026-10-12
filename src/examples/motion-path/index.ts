@@ -6,8 +6,8 @@ export default {
   section: 'technique',
   title: 'Motion path',
   summary: '요소가 정해 둔 곡선을 따라 이동합니다.',
-  desc: '`offset-path`에 이동할 경로를 그려 두고 `offset-distance`를 0%에서 100%로 바꾸면, 요소가 그 경로를 따라갑니다. `offset-rotate: auto`를 주면 화살표처럼 진행 방향을 바라보며 움직입니다. 상품이 장바구니로 날아가 담기는 효과처럼 궤적이 필요한 곳에 씁니다. 다만 Chrome은 `offset-distance` 애니메이션을 compositor에 맡기지 못하고 main thread에서 실행합니다. 다시 그리는 비용은 거의 없지만, main thread가 바쁜 순간에는 움직임이 끊길 수 있습니다.',
-  tag: 'CSS', kind: 'once', support: SUPPORT.motionPath,
+  desc: '`offset-path`에 이동할 경로를 그려 두고 `offset-distance`를 0%에서 100%로 바꾸면, 요소가 그 경로를 따라갑니다. `offset-rotate: auto`를 주면 화살표처럼 진행 방향을 바라보며 움직입니다. 상품이 장바구니로 날아가 담기는 효과처럼 궤적이 필요한 곳에 씁니다. 다만 Chrome은 `offset-distance` 애니메이션을 compositor에 맡기지 못하고 main thread에서 실행합니다. 다시 그리는 비용은 거의 없지만, main thread가 바쁜 순간에는 움직임이 끊길 수 있습니다. 영역 안에 마우스로 선을 그리면, JS가 그린 점들을 부드러운 곡선 `path()` 문자열로 바꿔 `offset-path`에 넣고 처음부터 다시 재생합니다. 영역에는 `touch-action: none`을 줘서 터치로 그리는 동안 페이지가 스크롤되지 않게 했습니다.',
+  tag: 'JS', kind: 'once', support: SUPPORT.motionPath,
   spec: { props: 'offset-distance', cost: 'composite' },
   params: [
     { key: 'duration', label: '재생 시간', value: 1200, min: 200, max: 3000, step: 50, unit: 'ms' },
@@ -27,6 +27,8 @@ export default {
       position: relative;
       width: 220px;
       height: 120px;
+      cursor: crosshair;
+      touch-action: none;
     }
 
     .path-traveler {
